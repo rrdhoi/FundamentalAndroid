@@ -5,6 +5,8 @@
       <map>
         <entry key="..\:/1File/1BFAA/app/src/main/res/layout/activity_detail.xml" value="0.22418478260869565" />
         <entry key="..\:/1File/1BFAA/app/src/main/res/layout/activity_main.xml" value="0.2" />
+        <entry key="..\:/1File/1BFAA/app/src/main/res/layout/followers_fragment.xml" value="0.22418478260869565" />
+        <entry key="..\:/1File/1BFAA/app/src/main/res/layout/following_fragment.xml" value="0.22418478260869565" />
         <entry key="..\:/1File/1BFAA/app/src/main/res/layout/item_user.xml" value="0.152" />
       </map>
     </option>

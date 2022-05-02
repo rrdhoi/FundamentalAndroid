@@ -5,6 +5,7 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.belajarbareng.databinding.ActivityMainBinding
+import com.belajarbareng.detail.DetailActivity
 import org.json.JSONObject
 import java.io.BufferedReader
 import java.io.InputStream
@@ -24,28 +25,8 @@ class MainActivity : AppCompatActivity() {
         val dataJson = getJsonObject(jsonFile)
         listUsers = parseJson(dataJson)
 
-//        listUsers = getListDataUsers()
 
         showRecyclerList()
-    }
-
-    private fun getListDataUsers() : ArrayList<User> {
-        val dataName = resources.getStringArray(R.array.name)
-        val dataPhoto = resources.obtainTypedArray(R.array.avatar)
-        val dataLocation = resources.getStringArray(R.array.location)
-
-        val listUsers = ArrayList<User>()
-        for (index in dataName.indices) {
-            val user = User(
-                name = dataName[index],
-                photo = dataPhoto.getResourceId(index, -1),
-                userLocation = dataLocation[index],
-            )
-            listUsers.add(user)
-        }
-
-        dataPhoto.recycle()
-        return listUsers
     }
 
     private fun getJsonObject(dataJson: InputStream): JSONObject {
